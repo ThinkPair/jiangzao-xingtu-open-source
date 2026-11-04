@@ -5673,9 +5673,9 @@
     },
     {
       "path": "docs/update-log/20261105-code-01.json",
-      "sourceSha256": "1f41cd5cc14c27c1ad045796105337ac07857c5a84f053c2a3fd9d8bdb73427c",
-      "sha256": "1f41cd5cc14c27c1ad045796105337ac07857c5a84f053c2a3fd9d8bdb73427c",
-      "bytes": 873,
+      "sourceSha256": "b45842b4bb64664f1f78bc986163eee2c5c4eedc9228121c0cef8e674e9f6c80",
+      "sha256": "b45842b4bb64664f1f78bc986163eee2c5c4eedc9228121c0cef8e674e9f6c80",
+      "bytes": 978,
       "transforms": []
     },
     {

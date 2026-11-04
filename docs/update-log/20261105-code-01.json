@@ -7,11 +7,12 @@
   "version": "1.2.28",
   "branch": "content/quarterly-refresh-20261105",
   "commit": "bf511d4",
-  "pr": null,
+  "pr": "https://github.com/ThinkPair/jiangzao-xingtu-open-source/pull/3",
   "validated": "static",
   "validatedAt": "2026-11-05T01:11:48+08:00",
   "validatedCommit": "bf511d4",
   "rollback": "远端 main 基线 3ede1a1a1ade91580df6f59be47f50703e252569；上一完整本地发行1.2.27保留。",
   "next": "持续目标进行中，本批新增更新美的1家，覆盖数不增加。平安银行仍为下一批候选；Git状态以本条PR及真实远端回执为准。",
-  "data": {}
+  "data": {},
+  "amendedAt": "2026-11-05T01:22:11+08:00"
 }

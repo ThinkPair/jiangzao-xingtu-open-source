@@ -209,6 +209,15 @@ def verify_company(root, code, controls, state, reviews):
     # Strict reads add hardlink rejection beyond the existing builder/queue contracts.
     inputs = {bundle_path + "/manifest.json": receipt["manifestSha256"],
               bundle_path + "/ready.json": receipt["readySha256"]}
+    maintenance_binding = {}
+    if receipt.get("maintenanceAuthorization"):
+        maintenance = receipt["maintenanceAuthorization"]
+        need(maintenance["registryPath"] == checker.MAINTENANCE_REGISTRY,
+             "maintenance_scope", "Maintenance authority must be the fixed trusted-root registry")
+        registry_raw = read_file(root / maintenance["registryPath"])
+        need(sha(registry_raw) == maintenance["registrySha256"], "input_drift", "Maintenance registry changed after mechanical validation")
+        inputs[maintenance["registryPath"]] = maintenance["registrySha256"]
+        maintenance_binding = {"maintenanceAuthorization": maintenance}
     for name, expected in receipt["verifiedPayloadHashes"].items():
         path = bundle / name
         digest, _ = guard.read_regular(path, keep_bytes=False)
@@ -257,7 +266,7 @@ def verify_company(root, code, controls, state, reviews):
     return {**({"contentTier": "L"} if controls["contentTier"] == "L" else {}), "code": code, "name": controls["selectedCompanies"][code], "version": version,
             "bundlePath": bundle_path, "manifestSha256": receipt["manifestSha256"],
             "readySha256": receipt["readySha256"], "verifiedPayloadHashes": receipt["verifiedPayloadHashes"],
-            "reviewPath": review["path"], "reviewSha256": review["sha256"], **repair_binding,
+            "reviewPath": review["path"], "reviewSha256": review["sha256"], **repair_binding, **maintenance_binding,
             **({"referencedClaimIds":sorted(used_claims)} if sampled_batch else {"declaredCoverageClaimIds":sorted(used_claims)}),
             **batch_binding,
             "contentDecision": "approved", **candidate,

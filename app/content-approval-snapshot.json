@@ -2253,8 +2253,8 @@
     },
     {
       "code": "000977.SZ",
-      "contentSha256": "cad870a824a7847c68da28b029aec125819f4d3b2f9f81947f1bb1c7131f95de",
-      "manifestSha256": "07c12214b7a9946571f0a430e18284ef61e8dfae98ab687d2a6c20919f7ca25e"
+      "contentSha256": "3a73d5dfeb0a2354e2dba2af3a7314b44f953a53f4a63060e0973cecc266cef8",
+      "manifestSha256": "7effcfab1d18904d2bb8f46b122f591d69a94e25baefb3547b11663bfcfcc76e"
     },
     {
       "code": "600036.SH",
@@ -2268,12 +2268,12 @@
     },
     {
       "code": "603019.SH",
-      "contentSha256": "f75ba380e673caff56bf7e343f860307174c89960272638e6e8ce98d9a1d451b",
-      "manifestSha256": "81ce1bd4c1ed396c19357c50e3062ccee65d9c359a290f300b8390b256bd0c4a"
+      "contentSha256": "7adfd4ef6a9b72ef716dd5d96c7fd20cadbbba1e7ad1e98a3774f4b047a6b033",
+      "manifestSha256": "781187c74ded93f80ebc6d4a7a38601dbb0ba1d664476088357a994eebcbcd0b"
     }
   ],
   "catalogue": {
-    "catalogueSha256": "9e520603cccce934a14a19517c6f7493217588589840132f0a9ddeccca2ca004",
+    "catalogueSha256": "729b852c20c137acb58ffd230c39f4f33f0407387a1d86e98c1f6704f6456a57",
     "counts": {
       "legacy": 1,
       "readable": 186,
@@ -2783,10 +2783,10 @@
         "tagline": "提供服务器、网络设备、云平台等数字基础设施与服务。"
       },
       {
-        "asOf": "2026-09-12",
+        "asOf": "2026-10-29",
         "audio": "script",
         "code": "000977.SZ",
-        "contentSha256": "cad870a824a7847c68da28b029aec125819f4d3b2f9f81947f1bb1c7131f95de",
+        "contentSha256": "3a73d5dfeb0a2354e2dba2af3a7314b44f953a53f4a63060e0973cecc266cef8",
         "headline": "",
         "kind": "seven-questions",
         "name": "浪潮信息",
@@ -2802,7 +2802,7 @@
           "reviewScope": "sampled_batch",
           "tagline": "为数据中心制造服务器，也提供存储、网络设备和维护服务。"
         },
-        "reportBasis": "资料截止 2026-09-12",
+        "reportBasis": "资料截止 2026-10-29",
         "status": "release-reviewed-seven",
         "tagline": "给数据中心造服务器，也做存储和网络互联设备"
       },
@@ -5495,10 +5495,10 @@
         "tagline": "以制冷压缩机为主，并销售铸件和商用制冷设备"
       },
       {
-        "asOf": "2026-08-26",
+        "asOf": "2026-10-28",
         "audio": "script",
         "code": "603019.SH",
-        "contentSha256": "f75ba380e673caff56bf7e343f860307174c89960272638e6e8ce98d9a1d451b",
+        "contentSha256": "7adfd4ef6a9b72ef716dd5d96c7fd20cadbbba1e7ad1e98a3774f4b047a6b033",
         "headline": "",
         "kind": "seven-questions",
         "name": "中科曙光",
@@ -5514,7 +5514,7 @@
           "reviewScope": "sampled_batch",
           "tagline": "制造高端计算与存储设备，并提供软件、系统集成和技术服务。"
         },
-        "reportBasis": "资料截止 2026-08-26",
+        "reportBasis": "资料截止 2026-10-28",
         "status": "release-reviewed-seven",
         "tagline": "造高端计算机和存储设备，也做软件、系统集成与技术服务"
       },
@@ -7522,7 +7522,7 @@
       },
       {
         "code": "000977.SZ",
-        "sha256": "cad870a824a7847c68da28b029aec125819f4d3b2f9f81947f1bb1c7131f95de"
+        "sha256": "3a73d5dfeb0a2354e2dba2af3a7314b44f953a53f4a63060e0973cecc266cef8"
       },
       {
         "code": "600036.SH",
@@ -7534,7 +7534,7 @@
       },
       {
         "code": "603019.SH",
-        "sha256": "f75ba380e673caff56bf7e343f860307174c89960272638e6e8ce98d9a1d451b"
+        "sha256": "7adfd4ef6a9b72ef716dd5d96c7fd20cadbbba1e7ad1e98a3774f4b047a6b033"
       }
     ]
   }

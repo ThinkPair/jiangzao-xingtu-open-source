@@ -739,6 +739,7 @@ def adopted_candidate(root, receipt, bundle_path, review, prior):
             require(adoption.get("schemaVersion") == 1 and adoption.get("jobId") == checker.JOB_ID and adoption.get("code") == receipt["code"], "Adoption identity mismatch")
             require(adoption.get("status") == "local_candidate_built" and adoption.get("candidate_only") is True and adoption.get("no_deploy") is True, "Invalid adoption status")
             require(adoption.get("bundlePath") == bundle_path and adoption.get("manifestSha256") == receipt["manifestSha256"] and adoption.get("readySha256") == receipt["readySha256"] and adoption.get("verifiedPayloadHashes") == receipt["verifiedPayloadHashes"], "Adoption package hashes drifted")
+            require(adoption.get("maintenanceAuthorization") == receipt.get("maintenanceAuthorization"), "Adoption maintenance authorization drifted")
             require(adoption.get("reviewPath") == review["path"] and adoption.get("reviewSha256") == review["sha256"] and adoption.get("review") == review["value"], "Adoption review drifted")
             output = adoption.get("output", {})
             require(output.get("path") == "index.html", "Invalid HTML path")

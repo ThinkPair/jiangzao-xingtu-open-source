@@ -1,6 +1,6 @@
 {
-  "asOf": "20261016-151430",
-  "sourceVersion": "1.2.26",
+  "asOf": "20261104-234728",
+  "sourceVersion": "1.2.27",
   "publicVersionLastRecorded": "1.2.26",
   "publicReleaseLastRecorded": "20261006T054347421734Z-672eeb94068a",
   "publicRevisionLastRecorded": "6ec48bc9b5bc",
@@ -18,7 +18,7 @@
   "uploadIsDeployment": false,
   "rawEvidenceIncluded": false,
   "privateResearchIncluded": false,
-  "lastUpdateLog": "20261016-code-03",
+  "lastUpdateLog": "20261104-code-01",
   "acceptedSevenQuestionContentCount": 14,
   "localWholeSiteSevenQuestionCount": 14,
   "publishedSevenQuestionCount": 14,
@@ -40,5 +40,26 @@
   },
   "legacyWebsiteCountersNote": "网站发行与验收字段来自2026-10-06的历史记录，不表示当前在线状态；原在线服务已停止。当前公开阅读规模单独见openReading。",
   "lastWebsiteReleaseEvidence": "docs/update-log/20261006-code-02.json",
-  "lastWebsiteReleaseRecordedAt": "2026-10-06"
+  "lastWebsiteReleaseRecordedAt": "2026-10-06",
+  "contentMaintenance": {
+    "status": "active",
+    "scope": "original_local_app_and_public_git",
+    "startedAt": "2026-11-04",
+    "currentBatch": [
+      "000977.SZ",
+      "603019.SH"
+    ],
+    "currentBatchStatus": "quarterly_content_approved",
+    "readableCompanies": 355,
+    "protectedBenchmarks": [
+      "601138.SH"
+    ],
+    "currentReportPeriod": "2026Q3",
+    "cloudServiceRestored": false,
+    "legacyWebsiteDataRefreshed": false,
+    "index": "docs/companies/updates/index.json",
+    "task": "docs/tasks/company-reading-maintenance.md",
+    "newPortalAllowed": false,
+    "originalAppTargetVersion": "1.2.27"
+  }
 }

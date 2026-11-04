@@ -37,6 +37,8 @@ MARKERS = {"manifest.json", "ready.json"}
 SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 RESERVED = {"CON", "PRN", "AUX", "NUL", *(f"COM{i}" for i in range(1, 10)), *(f"LPT{i}" for i in range(1, 10))}
 COMPANY_CODE = re.compile(r"[0-9]{6}\.(?:SH|SZ|BJ)\Z")
+MAINTENANCE_REGISTRY = "maintenance-authorizations.json"
+MAINTENANCE_SCOPE = "ordinary_seven_fact_refresh"
 
 
 class PackageError(ValueError):
@@ -70,14 +72,20 @@ def string_list(value, path, nonempty=False):
     return values
 
 
-def parse_date(value, path):
+def calendar_date(value, path):
     value = text(value, path)
     require(bool(re.fullmatch(r"(?:\d{8}|\d{4}-\d{2}-\d{2})", value)), "date", path, "Use a real YYYY-MM-DD or YYYYMMDD date")
     try:
         parsed = datetime.strptime(value, "%Y%m%d").date() if re.fullmatch(r"\d{8}", value) else date.fromisoformat(value)
     except ValueError:
         raise PackageError("date", path, "Use a real YYYY-MM-DD or YYYYMMDD date") from None
-    require(parsed <= CUTOFF, "date_after_cutoff", path, "Date exceeds pilot cutoff 2026-10-02")
+    return parsed
+
+
+def parse_date(value, path, *, cutoff=CUTOFF):
+    parsed = calendar_date(value, path)
+    message = "Date exceeds pilot cutoff 2026-10-02" if cutoff == CUTOFF else "Date exceeds authorized cutoff " + cutoff.isoformat()
+    require(parsed <= cutoff, "date_after_cutoff", path, message)
     return parsed
 
 
@@ -255,6 +263,97 @@ def load_companies(root=None):
     return _companies_snapshot(root)[0]
 
 
+def _read_maintenance_registry(path):
+    """Read a fixed trusted-root control file; reject links and concurrent edits."""
+    directory_guard(path.parent)
+    info = path.lstat()
+    require(stat.S_ISREG(info.st_mode) and not is_reparse(info) and info.st_nlink == 1,
+            "maintenance_path", path.name, "Maintenance registry must be a real unlinked regular file")
+    require(info.st_size <= 16 * 1024 * 1024, "maintenance_size", path.name, "Maintenance registry exceeds 16 MiB")
+    before = identity(info)
+    descriptor = os.open(path, os.O_RDONLY | getattr(os, "O_BINARY", 0) | getattr(os, "O_NOFOLLOW", 0))
+    with os.fdopen(descriptor, "rb") as stream:
+        opened_info = os.fstat(stream.fileno())
+        opened = identity(opened_info)
+        require(opened_info.st_nlink == 1 and opened_matches_path(opened, before), "maintenance_drift", path.name, "Maintenance registry changed before reading")
+        raw = stream.read(16 * 1024 * 1024 + 1)
+        after = path.lstat()
+        require(len(raw) <= 16 * 1024 * 1024 and identity(os.fstat(stream.fileno())) == opened
+                and identity(after) == before and after.st_nlink == 1,
+                "maintenance_drift", path.name, "Maintenance registry changed during reading")
+    return raw, before
+
+
+def maintenance_context(bundle, bodies, hashes, code):
+    """Only later-dated ordinary seven-question packages consult private authority.
+
+    Old Q and all L packages retain the frozen contract and do not need a registry.
+    The package never supplies a control path or grants its own date extension.
+    """
+    reader = parse_json(bodies["reader.json"], "reader.json")
+    require(isinstance(reader, dict), "schema", "reader.json", "Expected an object")
+    if content_tier(reader) == "L":
+        return None
+    evidence = parse_json(bodies["evidence.json"], "evidence.json")
+    require(isinstance(evidence, dict), "schema", "evidence.json", "Expected an object")
+    if max(calendar_date(reader.get("asOf"), "reader.asOf"), calendar_date(evidence.get("cutoff"), "evidence.cutoff")) <= CUTOFF:
+        return None
+    root = Path(os.path.abspath(TRUSTED_ROOT))
+    path = root / MAINTENANCE_REGISTRY
+    try:
+        path.lstat()
+    except FileNotFoundError:
+        return None  # No private registry: retain the original fixed-date rejection.
+    expected_path = f"inbox/{code}/{bundle.name}"
+    require(re.fullmatch(r"v\d{3,}", bundle.name) is not None and bundle == root / expected_path,
+            "maintenance_scope", "bundle", "Maintenance requires the exact trusted inbox/code/vNNN path")
+    require("producer-repair.json" not in hashes, "maintenance_scope", "bundle", "Fact maintenance is not legacy viewpoint repair")
+    try:
+        first, first_identity = _read_maintenance_registry(path)
+        second, second_identity = _read_maintenance_registry(path)
+        require(first == second and first_identity == second_identity, "maintenance_drift", path.name, "Maintenance registry changed across stable reads")
+        registry = parse_json(first, path.name)
+        shape(registry, {"schemaVersion", "jobId", "authorizations"}, set(), path.name)
+        require(registry["jobId"] == JOB_ID, "maintenance_job", path.name, "Maintenance registry belongs to another job")
+        require(isinstance(registry["authorizations"], list), "maintenance_schema", path.name, "authorizations must be a list")
+        seen_ids, seen_paths, selected = set(), set(), None
+        today = datetime.now(timezone(timedelta(hours=8))).date()
+        fields = {"authorizationId", "status", "code", "bundlePath", "manifestSha256", "cutoff", "authorizedAt", "userAuthorityRef", "owner", "scope"}
+        for index, row in enumerate(registry["authorizations"]):
+            label = f"{path.name}.authorizations[{index}]"
+            shape(row, fields, set(), label)
+            for key in ("authorizationId", "userAuthorityRef", "owner"):
+                value = text(row[key], label + "." + key)
+                require(value == row[key] and not any(ord(c) < 32 or ord(c) == 127 for c in value), "maintenance_schema", label, "Authority identity must be canonical nonempty text")
+            require(re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]{0,95}", row["authorizationId"]) is not None, "maintenance_schema", label, "Invalid authorizationId")
+            require(row["status"] in {"active", "revoked"} and row["scope"] == MAINTENANCE_SCOPE, "maintenance_scope", label, "Invalid status or maintenance scope")
+            require(isinstance(row["code"], str) and COMPANY_CODE.fullmatch(row["code"]), "maintenance_scope", label, "Invalid company code")
+            authorized_path = safe_relative(row["bundlePath"], label + ".bundlePath")
+            require(re.fullmatch(r"inbox/" + re.escape(row["code"]) + r"/v\d{3,}", authorized_path) is not None,
+                    "maintenance_scope", label, "Authorization must bind an exact same-company inbox version")
+            require(row["authorizationId"] not in seen_ids and authorized_path not in seen_paths, "maintenance_duplicate", label, "Duplicate authorization identity or bundle path")
+            seen_ids.add(row["authorizationId"]); seen_paths.add(authorized_path)
+            require(isinstance(row["manifestSha256"], str) and SHA256.fullmatch(row["manifestSha256"]), "maintenance_hash", label, "Invalid manifest SHA256")
+            cutoff = calendar_date(row["cutoff"], label + ".cutoff")
+            require(row["cutoff"] == cutoff.isoformat() and CUTOFF < cutoff <= today, "maintenance_date", label, "Maintenance cutoff must extend the frozen date without exceeding real UTC+8 today")
+            try:
+                authorized_at = datetime.fromisoformat(text(row["authorizedAt"], label + ".authorizedAt").replace("Z", "+00:00"))
+            except ValueError:
+                raise PackageError("maintenance_date", label, "authorizedAt must be an ISO timestamp with timezone") from None
+            require(authorized_at.tzinfo is not None and authorized_at.utcoffset() is not None and authorized_at.timestamp() <= time.time(),
+                    "maintenance_date", label, "Authorization must have a timezone and cannot be in the future")
+            if authorized_path == expected_path:
+                require(row["code"] == code and row["manifestSha256"] == hashes["manifest.json"] and row["status"] == "active",
+                        "maintenance_unauthorized", label, "Exact company/version/manifest needs active maintenance authorization")
+                selected = row
+        require(selected is not None, "maintenance_unauthorized", path.name, "No active exact maintenance authorization for this package")
+        return {"registryPath": MAINTENANCE_REGISTRY, "registrySha256": hashlib.sha256(first).hexdigest(), "authorization": selected}
+    except FileNotFoundError:
+        raise PackageError("maintenance_unauthorized", path.name, "Trusted maintenance registry is missing or was withdrawn") from None
+    except (OSError, OverflowError) as error:
+        raise PackageError("maintenance_unreadable", path.name, type(error).__name__ + ": maintenance authority could not be checked safely") from None
+
+
 class _LiveCompanies(Mapping):
     """Compatibility view; validation takes one explicit snapshot per operation."""
     def __getitem__(self, code):
@@ -330,7 +429,7 @@ def validate_business_model(model, claims):
     return used
 
 
-def validate_payload(bodies, hashes, code, manifest_entries, warnings, companies=None):
+def validate_payload(bodies, hashes, code, manifest_entries, warnings, companies=None, *, date_cutoff=CUTOFF):
     companies = load_companies() if companies is None else companies
     reader, evidence, sources = (parse_json(bodies[name], name) for name in ("reader.json", "evidence.json", "sources.json"))
     shape(reader, {"schemaVersion", "code", "name", "asOf", "tagline", "introduction", "answers"}, {"audioScript", "contentTier", "businessModel"}, "reader.json")
@@ -339,8 +438,8 @@ def validate_payload(bodies, hashes, code, manifest_entries, warnings, companies
     shape(evidence, {"schemaVersion", "companyCode", "cutoff", "claims"}, set(), "evidence.json")
     shape(sources, {"schemaVersion", "sources"}, set(), "sources.json")
     require(reader["code"] == evidence["companyCode"] == code and reader["name"] == companies[code], "company_identity", "reader/evidence", "Company code and selected short name must agree with this package")
-    as_of = parse_date(reader["asOf"], "reader.asOf")
-    require(parse_date(evidence["cutoff"], "evidence.cutoff") == CUTOFF, "cutoff", "evidence.cutoff", "Evidence cutoff must be 2026-10-02")
+    as_of = parse_date(reader["asOf"], "reader.asOf", cutoff=date_cutoff)
+    require(parse_date(evidence["cutoff"], "evidence.cutoff", cutoff=date_cutoff) == date_cutoff, "cutoff", "evidence.cutoff", "Evidence cutoff must exactly match " + date_cutoff.isoformat())
     for field in ("tagline", "introduction"):
         text(reader[field], "reader." + field)
     if "audioScript" in reader:
@@ -356,9 +455,9 @@ def validate_payload(bodies, hashes, code, manifest_entries, warnings, companies
         require(sid not in source_ids, "duplicate_id", p + ".id", "Duplicate source id")
         source_ids.add(sid)
         text(source["title"], p + ".title"); text(source["publisher"], p + ".publisher")
-        published = parse_date(source["publishedAt"], p + ".publishedAt")
+        published = parse_date(source["publishedAt"], p + ".publishedAt", cutoff=date_cutoff)
         published_dates.append(published)
-        parse_date(source["reportPeriod"], p + ".reportPeriod")
+        parse_date(source["reportPeriod"], p + ".reportPeriod", cutoff=date_cutoff)
         require(published <= as_of, "date_after_asof", p + ".publishedAt", "A cited source cannot be disclosed after reader.asOf")
         source_url(source["url"], p + ".url")
         string_list(source["readLocations"], p + ".readLocations", nonempty=True)
@@ -490,7 +589,9 @@ def check_bundle(bundle, settle_seconds=0.2):
         require(set(entries) == set(hashes) - MARKERS and REQUIRED_FILES <= entries.keys(), "manifest_coverage", "manifest.files", "Manifest must cover every payload file exactly once; no missing or extra files")
         require(all(hashes[name] == digest for name, digest in entries.items()), "payload_hash", "manifest.files", "Payload bytes differ from signed manifest")
         require(first["ready.json"][2] >= max(value[2] for name, value in first.items() if name != "ready.json" and stat.S_ISREG(value[0])), "ready_not_last", "ready.json", "A payload/manifest was written after ready; producer must rebuild hashes and write ready last")
-        report["counts"] = validate_payload(bodies, hashes, code, entries, report["warnings"], companies)
+        maintenance = maintenance_context(bundle, bodies, hashes, code)
+        date_cutoff = calendar_date(maintenance["authorization"]["cutoff"], "maintenance.cutoff") if maintenance else CUTOFF
+        report["counts"] = validate_payload(bodies, hashes, code, entries, report["warnings"], companies, date_cutoff=date_cutoff)
         tier = content_tier(parse_json(bodies["reader.json"], "reader.json"))
         if tier == "L":
             require("producer" in ready, "producer", "ready.producer", "L requires the producing identity and leased run UUID")
@@ -505,6 +606,9 @@ def check_bundle(bundle, settle_seconds=0.2):
             require("producer" not in ready, "producer", "ready.producer", "Producer metadata is reserved for explicitly marked L packages")
         final_companies, final_universe = _companies_snapshot()
         require(companies == final_companies and universe == final_universe, "company_config_drift", "company-universe.json", "Trusted company configuration changed during package validation")
+        if maintenance:
+            require(maintenance_context(bundle, bodies, hashes, code) == maintenance, "maintenance_drift", MAINTENANCE_REGISTRY, "Maintenance authorization changed during package validation")
+            report["maintenanceAuthorization"] = maintenance
         report.update(status="awaiting_semantic_review", mechanicalPassed=True, code=code, version=bundle.name,
                       manifestSha256=hashes["manifest.json"], readySha256=hashes["ready.json"],
                       verifiedPayloadHashes=entries, stableSnapshots=2)

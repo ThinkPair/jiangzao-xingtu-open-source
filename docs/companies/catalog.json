@@ -327,7 +327,13 @@
     "editorial": false,
     "industry": "IT设备",
     "status": "existing-edited-content",
-    "asOf": "2026-09-12"
+    "asOf": "2026-09-12",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000977.SZ.md",
+      "publishedAt": "2026-10-29",
+      "reviewedAt": "2026-11-04"
+    }
   },
   {
     "code": "000988.SZ",
@@ -2767,7 +2773,13 @@
     "editorial": false,
     "industry": "IT设备",
     "status": "existing-edited-content",
-    "asOf": "2026-08-26"
+    "asOf": "2026-08-26",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/603019.SH.md",
+      "publishedAt": "2026-10-28",
+      "reviewedAt": "2026-11-04"
+    }
   },
   {
     "code": "603053.SH",

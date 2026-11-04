@@ -147,8 +147,8 @@ def machine_check(bundle):
 def same_receipt(before, after):
     for key in ("manifestSha256", "readySha256", "verifiedPayloadHashes", "code", "version"):
         need(before[key] == after[key], "input_drift", "Package changed after the approved input was selected")
-    for key in ("contentTier", "rendererSha256", "producer"):
-        need(before.get(key) == after.get(key), "input_drift", "Tier, renderer or producer changed during validation")
+    for key in ("contentTier", "rendererSha256", "producer", "maintenanceAuthorization"):
+        need(before.get(key) == after.get(key), "input_drift", "Tier, renderer, producer or maintenance authorization changed during validation")
 
 
 def timestamp(value, label):
@@ -502,6 +502,8 @@ def build_candidate(root, bundle_path, review_path, version):
         if first.get("contentTier") == "L":
             need(sha(read_regular(Path(__file__).absolute())) == renderer_hash, "renderer_drift", "Renderer changed during candidate build")
             record.update(contentTier="L", rendererSha256=renderer_hash, producer=first["producer"])
+        if first.get("maintenanceAuthorization"):
+            record["maintenanceAuthorization"] = first["maintenanceAuthorization"]
         write_new(output / "adoption.json", json_bytes(record))
         result.update(status="local_candidate_built", code=first["code"], candidatePath=output.relative_to(root).as_posix(), htmlSha256=sha(rendered), manifestSha256=first["manifestSha256"], reviewSha256=sha(review_raw))
         if first.get("contentTier") == "L":

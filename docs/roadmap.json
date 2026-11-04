@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-10-16",
+  "updatedAt": "2026-11-04",
   "statusValues": [
     "pending",
     "in_progress",
@@ -8,6 +8,23 @@
     "dropped"
   ],
   "items": [
+    {
+      "id": "docs-04-quarterly-reading",
+      "area": "docs",
+      "title": "原公司页经营变化持续维护",
+      "status": "in_progress",
+      "acceptance": [
+        "正式披露逐项核读和独立复核，分批延续现有355家公司范围",
+        "原公司七问页接入新资料，桌面与窄屏、来源、朗读文本核验",
+        "其余公司、保护标杆及旧资料期间保持，公开笔记与原应用分别记录",
+        "每批完成原应用完整检查、本地验收及阶段Git回读"
+      ],
+      "pr": null,
+      "version": "1.2.27",
+      "updateLog": null,
+      "notes": "持续目标保持进行中。首批两家公司Q3内容已独立批准；本地运行与Git完成情况按本批update-log及独立回执确认，不声称355家公司均已更新。",
+      "task": "docs/tasks/company-reading-maintenance.md"
+    },
     {
       "id": "docs-03-public-audit",
       "area": "docs",

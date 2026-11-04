@@ -39,7 +39,13 @@
     "editorial": false,
     "industry": "区域地产",
     "status": "existing-edited-content",
-    "asOf": "2026-08-26"
+    "asOf": "2026-08-26",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000006.SZ.md",
+      "publishedAt": "2026-10-29",
+      "reviewedAt": "2026-11-05"
+    }
   },
   {
     "code": "000007.SZ",
@@ -49,7 +55,13 @@
     "editorial": false,
     "industry": "其他商业",
     "status": "existing-edited-content",
-    "asOf": "2026-08-26"
+    "asOf": "2026-08-26",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000007.SZ.md",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-05"
+    }
   },
   {
     "code": "000008.SZ",
@@ -59,7 +71,13 @@
     "editorial": false,
     "industry": "运输设备",
     "status": "existing-edited-content",
-    "asOf": "2026-08-29"
+    "asOf": "2026-08-29",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000008.SZ.md",
+      "publishedAt": "2026-10-31",
+      "reviewedAt": "2026-11-05"
+    }
   },
   {
     "code": "000009.SZ",
@@ -69,7 +87,13 @@
     "editorial": false,
     "industry": "电气设备",
     "status": "existing-edited-content",
-    "asOf": "2026-08-29"
+    "asOf": "2026-08-29",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000009.SZ.md",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-05"
+    }
   },
   {
     "code": "000010.SZ",

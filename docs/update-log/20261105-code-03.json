@@ -1,0 +1,17 @@
+{
+  "id": "20261105-code-03",
+  "type": "code",
+  "label": "网站代码更新",
+  "recordedAt": "2026-11-05T04:02:26+08:00",
+  "summary": "v1.2.30：同步深振业A、全新好、神州高铁、中国宝安原公司页三季报及公开经营笔记。原应用另经完整检查和独立页面验收；本公开副本按静态范围留证。旧7家仅维护批准绑定。",
+  "version": "1.2.30",
+  "branch": "content/quarterly-refresh-20261105-batch04",
+  "commit": "32f962c",
+  "pr": null,
+  "validated": "static",
+  "validatedAt": "2026-11-05T04:02:26+08:00",
+  "validatedCommit": "32f962c",
+  "rollback": "远端 main 基线 d3a7ee5b91fd8a547bddc14d5317d775d78c1fa4；上一完整本地发行1.2.29保留。",
+  "next": "持续目标进行中，本批更新已有4家，覆盖数不增加；后续沿既有公司顺序继续核对，Git状态以本条PR及真实远端回执为准。",
+  "data": {}
+}

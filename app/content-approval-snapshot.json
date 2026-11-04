@@ -2204,32 +2204,32 @@
     {
       "code": "000001.SZ",
       "contentSha256": "cad6916b1273b7fa61d0b20a5d4a4e63b74fd07bc79971ebb8e4673f088e63e4",
-      "manifestSha256": "c0cea03bc2e0b14a506a2f266e375a9d99bfe389d8cd4b0e17518ef18187f5ce"
+      "manifestSha256": "d11d34ebe9aaac74a1aaab2319dc23f0e49fccc534487c04df516743a3fe12ab"
     },
     {
       "code": "000002.SZ",
       "contentSha256": "7e5a877b35ae9720a815cb99221dd8e8863de9d02f43baa563e412329dbdc972",
-      "manifestSha256": "8a7ea6879b6c6b811d34f7c385826d707e1f7537fb2413ed47abd6c05a7cd5f2"
+      "manifestSha256": "3c73ef124d3cc4f9433c3ac9754d6c199ccecc8b00c6c465a8a94800f49f1c1c"
     },
     {
       "code": "000006.SZ",
-      "contentSha256": "6162efb060704fd08f3703e49307a73640f185b73f0e6581cd2672a4e3e33c42",
-      "manifestSha256": "42a085136dfa243684435ec94d30cc7f185a395243cf4cd90d0e058843d0e3dc"
+      "contentSha256": "d8adade5b961ecea03c8af042c857dacf20cab610e40c778739e939f70f62188",
+      "manifestSha256": "d4028d202bf83a661b8328a123b036bef1866e0b234b6540e3e20c37341b28b6"
     },
     {
       "code": "000007.SZ",
-      "contentSha256": "ec46fca68a155522c959bc2a0fe6ed760b9b449006878d427c940c398e91f0a3",
-      "manifestSha256": "881671bd7ce99c2c34d9848590bdb0e48da422d4577fe82995a05ff5796fda7e"
+      "contentSha256": "662cbb2cc83da72c95a7ea5848b93bc129ea0a33eb68f2f705d9488abfa6fad0",
+      "manifestSha256": "8e9863c91b371114db3e050192ecef915dadb29dca4581c7614fe66c7d33a18f"
     },
     {
       "code": "000008.SZ",
-      "contentSha256": "52748c44e0e6d750d719c1d896525c4a188e7682288990098069a9a177ee8474",
-      "manifestSha256": "5bc45d7409e322fcc8aff69603ccc814216bbc8007556ba5608997758dbde69d"
+      "contentSha256": "a44e31db5dc7c1dd3ed0f1d9e428cc569af1409b8bb8c0ae3bcf706d7075ac51",
+      "manifestSha256": "92477027cf98181942560f753f4f22bea680b0ab61c98adcd4e63fc4e71f6c4a"
     },
     {
       "code": "000009.SZ",
-      "contentSha256": "71d1a5597dfd6d03b5829712cad14df0f6dff1a7b55cfad6764a9b4fc9b08247",
-      "manifestSha256": "32bc23ae6e77c85241995bd46d9707d1d350887fa13c222da9eaae09c9d011ee"
+      "contentSha256": "96b3ef1a735f2fb57919ce8e9b147838f32e69cf016810eaf3e0d57529ca9e6d",
+      "manifestSha256": "e01e8375409ba193e364733c10191459ee58a841cd8fb043dda715b5f598d991"
     },
     {
       "code": "000010.SZ",
@@ -2249,31 +2249,31 @@
     {
       "code": "000333.SZ",
       "contentSha256": "0d500b74ac6dc706a6ccd620f70bf7089983ec24775ad3a41877fc2ed54fbe46",
-      "manifestSha256": "08ab4778df5056677e47d6b9521cf19bb12d034498b284c80aa8c289a0df13d8"
+      "manifestSha256": "6830dd18c09fa75d6d60f5eee632cdb965a847d347e202853484ee6041d1088d"
     },
     {
       "code": "000977.SZ",
       "contentSha256": "3a73d5dfeb0a2354e2dba2af3a7314b44f953a53f4a63060e0973cecc266cef8",
-      "manifestSha256": "513e3c0786b42a1cc2a1e2b22aee8ab1d6d7ecc70e518e9b61b7ac38dba301be"
+      "manifestSha256": "18e7376c2ec3cf13f10f304c25ca9e50abcb37f315ae80a1c330412803827b34"
     },
     {
       "code": "600036.SH",
       "contentSha256": "ee930d533eb9af7fa8d6d16ae15792a1e5643c5ee43553e9d67bf717487c3d51",
-      "manifestSha256": "94eade5112829b5f9363540cfdacd6bc7a3d9c4ce9d4c6a2536107d88daed764"
+      "manifestSha256": "fd5d6834fbac90859e919a90ece8a764e7958ffa2f4ce01b12fe20305fc32e0a"
     },
     {
       "code": "600588.SH",
       "contentSha256": "2ef829db53482f514ac5d11a532bd0e95f25cd97a809aed1909bd47949ab7e6d",
-      "manifestSha256": "109e813f70cba929c3082d3a4a62d5216904ac93ac43f76abb40c48d26479e6f"
+      "manifestSha256": "76e026061a65aeccc119685224a6ef8518bba98fe6de369dac4cae0f1795fa4c"
     },
     {
       "code": "603019.SH",
       "contentSha256": "7adfd4ef6a9b72ef716dd5d96c7fd20cadbbba1e7ad1e98a3774f4b047a6b033",
-      "manifestSha256": "04be4d60085ed7697a3ef75c1ee0125f75723099a13f49bbd7527b9f92c8ec78"
+      "manifestSha256": "38a0d4b312397a2ea2c6dbcbf71a3e29720fa9bf3139b3932e2b8d83e665963d"
     }
   ],
   "catalogue": {
-    "catalogueSha256": "62a890b148ec53e6836b795de86df24530c032b5c99eee97dba2efd2fbaefb1d",
+    "catalogueSha256": "a93a1db348c74e95e898fa3fe28eeab536f7d83dd5dab03052207b05ac808463",
     "counts": {
       "legacy": 1,
       "readable": 186,
@@ -2334,10 +2334,10 @@
         "tagline": "开发销售住宅，也为住宅小区、公寓、商场和仓储空间提供运营与服务"
       },
       {
-        "asOf": "2026-08-26",
+        "asOf": "2026-10-29",
         "audio": "script",
         "code": "000006.SZ",
-        "contentSha256": "6162efb060704fd08f3703e49307a73640f185b73f0e6581cd2672a4e3e33c42",
+        "contentSha256": "d8adade5b961ecea03c8af042c857dacf20cab610e40c778739e939f70f62188",
         "headline": "",
         "kind": "seven-questions",
         "name": "深振业A",
@@ -2353,15 +2353,15 @@
           "reviewScope": "sampled_batch",
           "tagline": "开发和销售住宅、商业物业，也出租房产并提供代建及物业服务。"
         },
-        "reportBasis": "资料截止 2026-08-26",
+        "reportBasis": "资料截止 2026-10-29",
         "status": "release-reviewed-seven",
         "tagline": "在深圳等地开发住宅和商业物业，主要靠卖房取得收入，也保留部分物业出租"
       },
       {
-        "asOf": "2026-08-26",
+        "asOf": "2026-10-30",
         "audio": "script",
         "code": "000007.SZ",
-        "contentSha256": "ec46fca68a155522c959bc2a0fe6ed760b9b449006878d427c940c398e91f0a3",
+        "contentSha256": "662cbb2cc83da72c95a7ea5848b93bc129ea0a33eb68f2f705d9488abfa6fad0",
         "headline": "",
         "kind": "seven-questions",
         "name": "全新好",
@@ -2377,15 +2377,15 @@
           "reviewScope": "sampled_batch",
           "tagline": "以汽车销售和售后服务为主，也做物业租赁及医药、医疗器械销售。"
         },
-        "reportBasis": "资料截止 2026-08-26",
+        "reportBasis": "资料截止 2026-10-30",
         "status": "release-reviewed-seven",
         "tagline": "在深圳华强北收租管物业，同时在盐城南通卖别克和大众汽车，并新做了医疗器械"
       },
       {
-        "asOf": "2026-08-29",
+        "asOf": "2026-10-31",
         "audio": "script",
         "code": "000008.SZ",
-        "contentSha256": "52748c44e0e6d750d719c1d896525c4a188e7682288990098069a9a177ee8474",
+        "contentSha256": "a44e31db5dc7c1dd3ed0f1d9e428cc569af1409b8bb8c0ae3bcf706d7075ac51",
         "headline": "",
         "kind": "seven-questions",
         "name": "神州高铁",
@@ -2401,15 +2401,15 @@
           "reviewScope": "sampled_batch",
           "tagline": "提供列车和线路的检测检修设备，也承担运营维保服务。"
         },
-        "reportBasis": "资料截止 2026-08-29",
+        "reportBasis": "资料截止 2026-10-31",
         "status": "release-reviewed-seven",
         "tagline": "为列车和线路提供检测、检修及信号设备，也承担地铁运营维保"
       },
       {
-        "asOf": "2026-08-29",
+        "asOf": "2026-10-30",
         "audio": "script",
         "code": "000009.SZ",
-        "contentSha256": "71d1a5597dfd6d03b5829712cad14df0f6dff1a7b55cfad6764a9b4fc9b08247",
+        "contentSha256": "96b3ef1a735f2fb57919ce8e9b147838f32e69cf016810eaf3e0d57529ca9e6d",
         "headline": "",
         "kind": "seven-questions",
         "name": "中国宝安",
@@ -2425,7 +2425,7 @@
           "reviewScope": "sampled_batch",
           "tagline": "通过旗下企业生产电池材料和精密零件，也经营医药与医疗服务。"
         },
-        "reportBasis": "资料截止 2026-08-29",
+        "reportBasis": "资料截止 2026-10-30",
         "status": "release-reviewed-seven",
         "tagline": "通过旗下企业经营电池材料、医药和精密零件的多产业集团"
       },
@@ -7490,19 +7490,19 @@
       },
       {
         "code": "000006.SZ",
-        "sha256": "6162efb060704fd08f3703e49307a73640f185b73f0e6581cd2672a4e3e33c42"
+        "sha256": "d8adade5b961ecea03c8af042c857dacf20cab610e40c778739e939f70f62188"
       },
       {
         "code": "000007.SZ",
-        "sha256": "ec46fca68a155522c959bc2a0fe6ed760b9b449006878d427c940c398e91f0a3"
+        "sha256": "662cbb2cc83da72c95a7ea5848b93bc129ea0a33eb68f2f705d9488abfa6fad0"
       },
       {
         "code": "000008.SZ",
-        "sha256": "52748c44e0e6d750d719c1d896525c4a188e7682288990098069a9a177ee8474"
+        "sha256": "a44e31db5dc7c1dd3ed0f1d9e428cc569af1409b8bb8c0ae3bcf706d7075ac51"
       },
       {
         "code": "000009.SZ",
-        "sha256": "71d1a5597dfd6d03b5829712cad14df0f6dff1a7b55cfad6764a9b4fc9b08247"
+        "sha256": "96b3ef1a735f2fb57919ce8e9b147838f32e69cf016810eaf3e0d57529ca9e6d"
       },
       {
         "code": "000010.SZ",

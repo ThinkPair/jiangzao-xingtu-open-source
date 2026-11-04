@@ -181,6 +181,111 @@
           21
         ]
       }
+    },
+    {
+      "code": "000006.SZ",
+      "name": "深振业A",
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000006.SZ.md",
+      "title": "亏损扩大，经营现金净流入增加要看税款比较基准",
+      "publishedAt": "2026-10-29",
+      "reviewedAt": "2026-11-05",
+      "audited": false,
+      "source": {
+        "url": "https://static.cninfo.com.cn/finalpage/2026-10-29/1225634487.PDF",
+        "sha256": "1b3d8a3a3677ca22872c9d5c3ff719c5142b857a6b624b0e9ebdb3d38077a086",
+        "pdfPages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      }
+    },
+    {
+      "code": "000007.SZ",
+      "name": "全新好",
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000007.SZ.md",
+      "title": "累计仍亏损，处置与现金收支要分开看",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-05",
+      "audited": false,
+      "source": {
+        "url": "https://static.cninfo.com.cn/finalpage/2026-10-30/1225640213.PDF",
+        "sha256": "afd84275b7fdcf740278cf76b1008ee88ed12708da2a8826cdaef404a7a79fe2",
+        "pdfPages": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "code": "000008.SZ",
+      "name": "神州高铁",
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000008.SZ.md",
+      "title": "累计减亏，收入与经营现金仍承压",
+      "publishedAt": "2026-10-31",
+      "reviewedAt": "2026-11-05",
+      "audited": false,
+      "source": {
+        "url": "https://static.cninfo.com.cn/finalpage/2026-10-31/1225647202.PDF",
+        "sha256": "11203ef207424f49c76cffbf65ddaf1b6ee38563005d82f7de1cc758fc129275",
+        "pdfPages": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ]
+      }
+    },
+    {
+      "code": "000009.SZ",
+      "name": "中国宝安",
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000009.SZ.md",
+      "title": "收入增长，归母亏损与现金变化要分开看",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-05",
+      "audited": false,
+      "source": {
+        "url": "https://static.cninfo.com.cn/finalpage/2026-10-30/1225645110.PDF",
+        "sha256": "dd8bc73a51add2fa896a0f5e4b5703021586ceafff8246d071c902fa8a0e4ec4",
+        "pdfPages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ]
+      }
     }
   ]
 }

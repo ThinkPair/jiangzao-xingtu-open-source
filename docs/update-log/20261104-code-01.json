@@ -7,11 +7,12 @@
   "version": "1.2.27",
   "branch": "content/quarterly-refresh-20261104",
   "commit": "0fcbb14",
-  "pr": null,
+  "pr": "https://github.com/ThinkPair/jiangzao-xingtu-open-source/pull/1",
   "validated": "static",
   "validatedAt": "2026-11-04T23:46:10+08:00",
   "validatedCommit": "0fcbb14",
   "rollback": "远端 main 基线 59d61e133ab11b7c9f4fd8a802fb159036c27f11；原本地发行 v1.2.26 保留。",
   "next": "持续目标进行中，本批仅更新2家，覆盖数不增加。美的原件核验完成但未进入本版；后续按正式原件、独立审核、原页面验收与阶段Git回读接续。",
-  "data": {}
+  "data": {},
+  "amendedAt": "2026-11-04T23:58:57+08:00"
 }

@@ -1,6 +1,6 @@
 {
-  "asOf": "20261104-234728",
-  "sourceVersion": "1.2.27",
+  "asOf": "20261105-011149",
+  "sourceVersion": "1.2.28",
   "publicVersionLastRecorded": "1.2.26",
   "publicReleaseLastRecorded": "20261006T054347421734Z-672eeb94068a",
   "publicRevisionLastRecorded": "6ec48bc9b5bc",
@@ -18,7 +18,7 @@
   "uploadIsDeployment": false,
   "rawEvidenceIncluded": false,
   "privateResearchIncluded": false,
-  "lastUpdateLog": "20261104-code-01",
+  "lastUpdateLog": "20261105-code-01",
   "acceptedSevenQuestionContentCount": 14,
   "localWholeSiteSevenQuestionCount": 14,
   "publishedSevenQuestionCount": 14,
@@ -46,10 +46,9 @@
     "scope": "original_local_app_and_public_git",
     "startedAt": "2026-11-04",
     "currentBatch": [
-      "000977.SZ",
-      "603019.SH"
+      "000333.SZ"
     ],
-    "currentBatchStatus": "quarterly_content_approved",
+    "currentBatchStatus": "local_accepted",
     "readableCompanies": 355,
     "protectedBenchmarks": [
       "601138.SH"
@@ -60,6 +59,6 @@
     "index": "docs/companies/updates/index.json",
     "task": "docs/tasks/company-reading-maintenance.md",
     "newPortalAllowed": false,
-    "originalAppTargetVersion": "1.2.27"
+    "originalAppTargetVersion": "1.2.28"
   }
 }

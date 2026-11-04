@@ -2248,13 +2248,13 @@
     },
     {
       "code": "000333.SZ",
-      "contentSha256": "4bbde5e5144c5dd032cecc1ccfd251f180072f577b77df771bdb007593a5b27d",
-      "manifestSha256": "deff6ee41c04a0324808bffc2f2e1bcf170c5023155bbd5ac8f26db63e1971c7"
+      "contentSha256": "0d500b74ac6dc706a6ccd620f70bf7089983ec24775ad3a41877fc2ed54fbe46",
+      "manifestSha256": "fadd8986d0f037fb067b118a8ac52ca7315b86d756a25ad123472b9c2a13fa52"
     },
     {
       "code": "000977.SZ",
       "contentSha256": "3a73d5dfeb0a2354e2dba2af3a7314b44f953a53f4a63060e0973cecc266cef8",
-      "manifestSha256": "7effcfab1d18904d2bb8f46b122f591d69a94e25baefb3547b11663bfcfcc76e"
+      "manifestSha256": "1d257580309766c5738d7c21c6cc8cd73bd363029426258f63e4db5242a8288a"
     },
     {
       "code": "600036.SH",
@@ -2269,11 +2269,11 @@
     {
       "code": "603019.SH",
       "contentSha256": "7adfd4ef6a9b72ef716dd5d96c7fd20cadbbba1e7ad1e98a3774f4b047a6b033",
-      "manifestSha256": "781187c74ded93f80ebc6d4a7a38601dbb0ba1d664476088357a994eebcbcd0b"
+      "manifestSha256": "d9e19bc1481215bfd2f99ecee0d13a3a5439de1deaff944148a8ce296b8924b0"
     }
   ],
   "catalogue": {
-    "catalogueSha256": "729b852c20c137acb58ffd230c39f4f33f0407387a1d86e98c1f6704f6456a57",
+    "catalogueSha256": "605e50ed8de02412c331f003b34e59f97ba5eb6be1fc152d88baa707ea6a60f6",
     "counts": {
       "legacy": 1,
       "readable": 186,
@@ -2574,10 +2574,10 @@
         "tagline": "销售计算机、服务器及部件，也提供通信等系统装备。"
       },
       {
-        "asOf": "2026-08-29",
+        "asOf": "2026-10-30",
         "audio": "script",
         "code": "000333.SZ",
-        "contentSha256": "4bbde5e5144c5dd032cecc1ccfd251f180072f577b77df771bdb007593a5b27d",
+        "contentSha256": "0d500b74ac6dc706a6ccd620f70bf7089983ec24775ad3a41877fc2ed54fbe46",
         "headline": "",
         "kind": "seven-questions",
         "name": "美的集团",
@@ -2586,7 +2586,7 @@
           "contentSha256": "53c0f1678f9f0712dafd0c87d0c5390d326381675e870ee37d7038c5f048a4f4",
           "tagline": "家电是收入大头，也给企业做设备和系统。"
         },
-        "reportBasis": "资料截止 2026-08-29",
+        "reportBasis": "资料截止 2026-10-30",
         "status": "release-reviewed-seven",
         "tagline": "既造卖给家庭的家电，也做卖给企业的楼宇、工业与机器人业务"
       },
@@ -7518,7 +7518,7 @@
       },
       {
         "code": "000333.SZ",
-        "sha256": "4bbde5e5144c5dd032cecc1ccfd251f180072f577b77df771bdb007593a5b27d"
+        "sha256": "0d500b74ac6dc706a6ccd620f70bf7089983ec24775ad3a41877fc2ed54fbe46"
       },
       {
         "code": "000977.SZ",

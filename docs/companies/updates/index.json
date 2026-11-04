@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-04",
+  "updatedAt": "2026-11-05",
   "entries": [
     {
       "code": "000977.SZ",
@@ -14,7 +14,15 @@
       "source": {
         "url": "https://static.cninfo.com.cn/finalpage/2026-10-29/1225637120.PDF",
         "sha256": "3e0be9a62b44e7861687d683c6fb19ef1da235619b4c1a15eb1c38166e016fe6",
-        "pdfPages": [1, 2, 3, 5, 6, 9, 10]
+        "pdfPages": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          9,
+          10
+        ]
       }
     },
     {
@@ -29,7 +37,38 @@
       "source": {
         "url": "https://static.cninfo.com.cn/finalpage/2026-10-28/1225631343.PDF",
         "sha256": "1bda6acfc0d7a841cd6ac2360692158751f46015d8b05b9b02409d11a5247b94",
-        "pdfPages": [1, 3, 4, 6, 7, 11, 12]
+        "pdfPages": [
+          1,
+          3,
+          4,
+          6,
+          7,
+          11,
+          12
+        ]
+      }
+    },
+    {
+      "code": "000333.SZ",
+      "name": "美的集团",
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000333.SZ.md",
+      "title": "利润分化，要连同汇率和经营现金收支一起看",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-05",
+      "audited": false,
+      "source": {
+        "url": "https://static.cninfo.com.cn/finalpage/2026-10-30/1225645132.PDF",
+        "sha256": "9c52a6175a6f41e4dec481127e278dfe3dc832901defd0e4ed053a47cc597805",
+        "pdfPages": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          10,
+          11
+        ]
       }
     }
   ]

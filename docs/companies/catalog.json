@@ -127,7 +127,13 @@
     "editorial": false,
     "industry": "家用电器",
     "status": "existing-edited-content",
-    "asOf": "2026-08-29"
+    "asOf": "2026-08-29",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000333.SZ.md",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-05"
+    }
   },
   {
     "code": "000404.SZ",

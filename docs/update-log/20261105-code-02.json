@@ -7,11 +7,12 @@
   "version": "1.2.29",
   "branch": "content/quarterly-refresh-20261105-batch03",
   "commit": "3ee2203",
-  "pr": null,
+  "pr": "https://github.com/ThinkPair/jiangzao-xingtu-open-source/pull/5",
   "validated": "static",
   "validatedAt": "2026-11-05T02:54:40+08:00",
   "validatedCommit": "3ee2203",
   "rollback": "远端 main 基线 f65766121d1cb2c77fe5728242ac122e48b8dd94；上一完整本地发行1.2.28保留。",
-  "next": "持续目标进行中，本批更新已有4家，覆盖数不增加；后续沿既有公司顺序继续核对，Git状态以本条PR及真实远端回执为准。",
-  "data": {}
+  "next": "第三批四家已完成原站本地验收及内容Git同步；累计更新7家，覆盖仍186家。后续沿维护账本继续逐批更新，公司资料与行情日期分别保留。",
+  "data": {},
+  "amendedAt": "2026-11-05T03:03:54+08:00"
 }

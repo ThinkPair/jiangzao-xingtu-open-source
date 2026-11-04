@@ -70,6 +70,117 @@
           11
         ]
       }
+    },
+    {
+      "code": "000001.SZ",
+      "name": "平安银行",
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000001.SZ.md",
+      "title": "利润保持增长，息差和信贷风险要分开看",
+      "publishedAt": "2026-10-24",
+      "reviewedAt": "2026-11-05",
+      "audited": false,
+      "source": {
+        "url": "https://static.cninfo.com.cn/finalpage/2026-10-24/1225620609.PDF",
+        "sha256": "0f398bf5504cc64c9a51b7563cdaea8a69ee57ddb238e2888345f7d7aaf0a016",
+        "pdfPages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          18,
+          19,
+          22,
+          23,
+          24,
+          31,
+          33,
+          35
+        ]
+      }
+    },
+    {
+      "code": "000002.SZ",
+      "name": "万科A",
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000002.SZ.md",
+      "title": "亏损有所收窄，现金与到期债务压力仍要分开看",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-05",
+      "audited": false,
+      "source": {
+        "url": "https://static.cninfo.com.cn/finalpage/2026-10-30/1225644984.PDF",
+        "sha256": "f12a3dd83256c9ac6225ef16c650f697a00791c1820d1486ff9738d6d2ef697b",
+        "pdfPages": [
+          1,
+          2,
+          3,
+          6,
+          7,
+          10,
+          11,
+          12,
+          13,
+          15
+        ]
+      }
+    },
+    {
+      "code": "600036.SH",
+      "name": "招商银行",
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/600036.SH.md",
+      "title": "利润增长，息差同比下降与单季持平同时发生",
+      "publishedAt": "2026-10-31",
+      "reviewedAt": "2026-11-05",
+      "audited": false,
+      "source": {
+        "url": "https://static.cninfo.com.cn/finalpage/2026-10-31/1225649239.PDF",
+        "sha256": "41330517043bdff6350195aec6efad906555f3268aaa8dd386cf7257b0531d7c",
+        "pdfPages": [
+          1,
+          2,
+          4,
+          5,
+          6,
+          8,
+          10,
+          11,
+          17,
+          21
+        ]
+      }
+    },
+    {
+      "code": "600588.SH",
+      "name": "用友网络",
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/600588.SH.md",
+      "title": "前三季度仍亏损，累计现金仍净流出",
+      "publishedAt": "2026-10-31",
+      "reviewedAt": "2026-11-05",
+      "audited": false,
+      "source": {
+        "url": "https://static.cninfo.com.cn/finalpage/2026-10-31/1225648003.PDF",
+        "sha256": "ddf70066d9a8d8b05d37c8c0089e04825eaeaed93d7303bc229add2c4e9e274e",
+        "pdfPages": [
+          1,
+          2,
+          3,
+          4,
+          6,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          21
+        ]
+      }
     }
   ]
 }

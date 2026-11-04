@@ -2203,13 +2203,13 @@
   "approvedSeven": [
     {
       "code": "000001.SZ",
-      "contentSha256": "adac18d7ee2ceba3cf651249d14d00081a4b803a62f01313d27939c0bdcad3bc",
-      "manifestSha256": "2bf178d2c4544201aa841fede781334910d7c16bf1ff0e9c217f59767420795f"
+      "contentSha256": "cad6916b1273b7fa61d0b20a5d4a4e63b74fd07bc79971ebb8e4673f088e63e4",
+      "manifestSha256": "c0cea03bc2e0b14a506a2f266e375a9d99bfe389d8cd4b0e17518ef18187f5ce"
     },
     {
       "code": "000002.SZ",
-      "contentSha256": "e9e9f7b06e687b39f3244132a3ef6ae1c622b9f6aa8eca88eb0a90352c8c9233",
-      "manifestSha256": "3fdc5d0b1ea4b957ea33506228ef5ae9e30c4a124824c36fc74e783e619604de"
+      "contentSha256": "7e5a877b35ae9720a815cb99221dd8e8863de9d02f43baa563e412329dbdc972",
+      "manifestSha256": "8a7ea6879b6c6b811d34f7c385826d707e1f7537fb2413ed47abd6c05a7cd5f2"
     },
     {
       "code": "000006.SZ",
@@ -2249,31 +2249,31 @@
     {
       "code": "000333.SZ",
       "contentSha256": "0d500b74ac6dc706a6ccd620f70bf7089983ec24775ad3a41877fc2ed54fbe46",
-      "manifestSha256": "fadd8986d0f037fb067b118a8ac52ca7315b86d756a25ad123472b9c2a13fa52"
+      "manifestSha256": "08ab4778df5056677e47d6b9521cf19bb12d034498b284c80aa8c289a0df13d8"
     },
     {
       "code": "000977.SZ",
       "contentSha256": "3a73d5dfeb0a2354e2dba2af3a7314b44f953a53f4a63060e0973cecc266cef8",
-      "manifestSha256": "1d257580309766c5738d7c21c6cc8cd73bd363029426258f63e4db5242a8288a"
+      "manifestSha256": "513e3c0786b42a1cc2a1e2b22aee8ab1d6d7ecc70e518e9b61b7ac38dba301be"
     },
     {
       "code": "600036.SH",
-      "contentSha256": "fbf45fd9cae5c707f3d1b9865fc9989da37d587f34bc54fe1629c3da781b4864",
-      "manifestSha256": "4b73a16004ad27889074e0d15d1bcd493d06edda21bde3f2769a1558d134108b"
+      "contentSha256": "ee930d533eb9af7fa8d6d16ae15792a1e5643c5ee43553e9d67bf717487c3d51",
+      "manifestSha256": "94eade5112829b5f9363540cfdacd6bc7a3d9c4ce9d4c6a2536107d88daed764"
     },
     {
       "code": "600588.SH",
-      "contentSha256": "9c434aeeb725e4ae1b3c884e0a4345ad851c8c0a44aebbaeb821329651097904",
-      "manifestSha256": "628fdf47491416df4d16925a40bbbd371bbe13dc81467598c9fdd691e4d5edb4"
+      "contentSha256": "2ef829db53482f514ac5d11a532bd0e95f25cd97a809aed1909bd47949ab7e6d",
+      "manifestSha256": "109e813f70cba929c3082d3a4a62d5216904ac93ac43f76abb40c48d26479e6f"
     },
     {
       "code": "603019.SH",
       "contentSha256": "7adfd4ef6a9b72ef716dd5d96c7fd20cadbbba1e7ad1e98a3774f4b047a6b033",
-      "manifestSha256": "d9e19bc1481215bfd2f99ecee0d13a3a5439de1deaff944148a8ce296b8924b0"
+      "manifestSha256": "04be4d60085ed7697a3ef75c1ee0125f75723099a13f49bbd7527b9f92c8ec78"
     }
   ],
   "catalogue": {
-    "catalogueSha256": "605e50ed8de02412c331f003b34e59f97ba5eb6be1fc152d88baa707ea6a60f6",
+    "catalogueSha256": "62a890b148ec53e6836b795de86df24530c032b5c99eee97dba2efd2fbaefb1d",
     "counts": {
       "legacy": 1,
       "readable": 186,
@@ -2286,10 +2286,10 @@
     },
     "entries": [
       {
-        "asOf": "2026-08-15",
+        "asOf": "2026-10-24",
         "audio": "script",
         "code": "000001.SZ",
-        "contentSha256": "adac18d7ee2ceba3cf651249d14d00081a4b803a62f01313d27939c0bdcad3bc",
+        "contentSha256": "cad6916b1273b7fa61d0b20a5d4a4e63b74fd07bc79971ebb8e4673f088e63e4",
         "headline": "",
         "kind": "seven-questions",
         "name": "平安银行",
@@ -2305,15 +2305,15 @@
           "reviewScope": "sampled_batch",
           "tagline": "让个人和企业存钱、借钱、收付款，也提供理财产品销售和资产托管服务。"
         },
-        "reportBasis": "资料截止 2026-08-15",
+        "reportBasis": "资料截止 2026-10-24",
         "status": "release-reviewed-seven",
         "tagline": "为个人和企业提供存贷款、支付与资金管理服务，收入主要来自净利息"
       },
       {
-        "asOf": "2026-08-28",
+        "asOf": "2026-10-30",
         "audio": "script",
         "code": "000002.SZ",
-        "contentSha256": "e9e9f7b06e687b39f3244132a3ef6ae1c622b9f6aa8eca88eb0a90352c8c9233",
+        "contentSha256": "7e5a877b35ae9720a815cb99221dd8e8863de9d02f43baa563e412329dbdc972",
         "headline": "",
         "kind": "seven-questions",
         "name": "万科A",
@@ -2329,7 +2329,7 @@
           "reviewScope": "sampled_batch",
           "tagline": "开发住宅，也经营物业服务、租赁住宅、商业和仓储空间。"
         },
-        "reportBasis": "资料截止 2026-08-28",
+        "reportBasis": "资料截止 2026-10-30",
         "status": "release-reviewed-seven",
         "tagline": "开发销售住宅，也为住宅小区、公寓、商场和仓储空间提供运营与服务"
       },
@@ -5207,10 +5207,10 @@
         "tagline": "给数据中心提供企业级固态硬盘"
       },
       {
-        "asOf": "2026-08-29",
+        "asOf": "2026-10-31",
         "audio": "script",
         "code": "600036.SH",
-        "contentSha256": "fbf45fd9cae5c707f3d1b9865fc9989da37d587f34bc54fe1629c3da781b4864",
+        "contentSha256": "ee930d533eb9af7fa8d6d16ae15792a1e5643c5ee43553e9d67bf717487c3d51",
         "headline": "",
         "kind": "seven-questions",
         "name": "招商银行",
@@ -5219,7 +5219,7 @@
           "contentSha256": "d5141701e99c7348ac32e3c4c7aeacdabbfe4252c8283803d2b853f03454f829",
           "tagline": "帮个人和企业存钱、借钱、转账，也提供理财和资产管理服务。"
         },
-        "reportBasis": "资料截止 2026-08-29",
+        "reportBasis": "资料截止 2026-10-31",
         "status": "release-reviewed-seven",
         "tagline": "吸收存款、发放贷款赚利差，也靠银行卡、财富管理和结算收服务费"
       },
@@ -5320,10 +5320,10 @@
         "tagline": "以冷柜等制冷电器为主，覆盖家庭和商用冷链"
       },
       {
-        "asOf": "2026-08-22",
+        "asOf": "2026-10-31",
         "audio": "script",
         "code": "600588.SH",
-        "contentSha256": "9c434aeeb725e4ae1b3c884e0a4345ad851c8c0a44aebbaeb821329651097904",
+        "contentSha256": "2ef829db53482f514ac5d11a532bd0e95f25cd97a809aed1909bd47949ab7e6d",
         "headline": "",
         "kind": "seven-questions",
         "name": "用友网络",
@@ -5332,7 +5332,7 @@
           "contentSha256": "383eee22a4040d2bf453d35eef6d015607c1b6370596a45aaf1e35c93c902ca8",
           "tagline": "给企业做管理软件，也帮客户把系统用起来。"
         },
-        "reportBasis": "资料截止 2026-08-22",
+        "reportBasis": "资料截止 2026-10-31",
         "status": "release-reviewed-seven",
         "tagline": "给企业和政府做财务、人力、供应链等管理软件，并负责实施、培训和长期运维"
       },
@@ -7482,11 +7482,11 @@
     "sevenQuestions": [
       {
         "code": "000001.SZ",
-        "sha256": "adac18d7ee2ceba3cf651249d14d00081a4b803a62f01313d27939c0bdcad3bc"
+        "sha256": "cad6916b1273b7fa61d0b20a5d4a4e63b74fd07bc79971ebb8e4673f088e63e4"
       },
       {
         "code": "000002.SZ",
-        "sha256": "e9e9f7b06e687b39f3244132a3ef6ae1c622b9f6aa8eca88eb0a90352c8c9233"
+        "sha256": "7e5a877b35ae9720a815cb99221dd8e8863de9d02f43baa563e412329dbdc972"
       },
       {
         "code": "000006.SZ",
@@ -7526,11 +7526,11 @@
       },
       {
         "code": "600036.SH",
-        "sha256": "fbf45fd9cae5c707f3d1b9865fc9989da37d587f34bc54fe1629c3da781b4864"
+        "sha256": "ee930d533eb9af7fa8d6d16ae15792a1e5643c5ee43553e9d67bf717487c3d51"
       },
       {
         "code": "600588.SH",
-        "sha256": "9c434aeeb725e4ae1b3c884e0a4345ad851c8c0a44aebbaeb821329651097904"
+        "sha256": "2ef829db53482f514ac5d11a532bd0e95f25cd97a809aed1909bd47949ab7e6d"
       },
       {
         "code": "603019.SH",

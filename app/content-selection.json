@@ -10,11 +10,11 @@
   "sevenQuestions": [
     {
       "code": "000001.SZ",
-      "sha256": "adac18d7ee2ceba3cf651249d14d00081a4b803a62f01313d27939c0bdcad3bc"
+      "sha256": "cad6916b1273b7fa61d0b20a5d4a4e63b74fd07bc79971ebb8e4673f088e63e4"
     },
     {
       "code": "000002.SZ",
-      "sha256": "e9e9f7b06e687b39f3244132a3ef6ae1c622b9f6aa8eca88eb0a90352c8c9233"
+      "sha256": "7e5a877b35ae9720a815cb99221dd8e8863de9d02f43baa563e412329dbdc972"
     },
     {
       "code": "000006.SZ",
@@ -54,11 +54,11 @@
     },
     {
       "code": "600036.SH",
-      "sha256": "fbf45fd9cae5c707f3d1b9865fc9989da37d587f34bc54fe1629c3da781b4864"
+      "sha256": "ee930d533eb9af7fa8d6d16ae15792a1e5643c5ee43553e9d67bf717487c3d51"
     },
     {
       "code": "600588.SH",
-      "sha256": "9c434aeeb725e4ae1b3c884e0a4345ad851c8c0a44aebbaeb821329651097904"
+      "sha256": "2ef829db53482f514ac5d11a532bd0e95f25cd97a809aed1909bd47949ab7e6d"
     },
     {
       "code": "603019.SH",

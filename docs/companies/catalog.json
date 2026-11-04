@@ -7,7 +7,13 @@
     "editorial": false,
     "industry": "银行",
     "status": "existing-edited-content",
-    "asOf": "2026-08-15"
+    "asOf": "2026-08-15",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000001.SZ.md",
+      "publishedAt": "2026-10-24",
+      "reviewedAt": "2026-11-05"
+    }
   },
   {
     "code": "000002.SZ",
@@ -17,7 +23,13 @@
     "editorial": false,
     "industry": "全国地产",
     "status": "existing-edited-content",
-    "asOf": "2026-08-28"
+    "asOf": "2026-08-28",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/000002.SZ.md",
+      "publishedAt": "2026-10-30",
+      "reviewedAt": "2026-11-05"
+    }
   },
   {
     "code": "000006.SZ",
@@ -2329,7 +2341,13 @@
     "editorial": false,
     "industry": "银行",
     "status": "existing-edited-content",
-    "asOf": "2026-08-29"
+    "asOf": "2026-08-29",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/600036.SH.md",
+      "publishedAt": "2026-10-31",
+      "reviewedAt": "2026-11-05"
+    }
   },
   {
     "code": "600052.SH",
@@ -2489,7 +2507,13 @@
     "editorial": false,
     "industry": "软件服务",
     "status": "existing-edited-content",
-    "asOf": "2026-08-22"
+    "asOf": "2026-08-22",
+    "latestUpdate": {
+      "reportPeriod": "2026Q3",
+      "path": "updates/2026Q3/600588.SH.md",
+      "publishedAt": "2026-10-31",
+      "reviewedAt": "2026-11-05"
+    }
   },
   {
     "code": "600597.SH",
